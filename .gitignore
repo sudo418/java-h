@@ -1,8 +1,8 @@
-# IntelliJ IDEA
-.idea/
-*.iml
-out/
-*.class
+# IntelliJ IDEA project files (ignore everywhere, including subfolders)
+**/.idea/
+**/*.iml
+**/out/
+**/*.class
 
 # OS-specific
 .DS_Store
