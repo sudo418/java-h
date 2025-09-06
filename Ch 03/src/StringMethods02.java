@@ -6,7 +6,10 @@ public class StringMethods02 {
         System.out.println(name.startsWith(""));
         //true (empty string is always a prefix)
 
+        System.out.println(name.startsWith("ra", 3));
+
         System.out.println(name.endsWith("u"));
+        // startsWith and endsWith takes only String as parameteres, not char
 
         System.out.println(name.charAt(3));
 
