@@ -95,6 +95,19 @@ public class Switch {
             case "chirayu" -> "Your name is chirayu";
             default -> "I don't know your name";
         };
+        /*
+        In the new switch :-
+        If we use switch just to run code (statement), default is optional.
+        If we use switch to return/assign a value (expression), default
+        is compulsory unless all possible values are covered.
+
+        --> In the above code we are assigning value of switch case to
+        message that's why default is compulsory otherwise it will give error.
+        --> In the code starting from line 72 default is not necessary coz
+        it's just a statement switch is not returning value to some variable.
+        Statement doesn’t have to produce a value → so compiler doesn’t care
+        about exhaustiveness.
+        */
 
         System.out.println(message);
     }
