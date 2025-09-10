@@ -25,5 +25,33 @@ public class PwLoops {
             sum += lastDigit;
         }
         */
+
+        // program to print first n odd numbers and their sum
+        int n1 = 5;
+        int sum1 = 0;
+
+        for(int i = 0; i < n1; i++)
+        {
+            System.out.println(2 * i + 1);
+            sum1 = sum1 + (2 * i + 1);
+        }
+        System.out.println(sum1);
+
+        // program to print odd numbers between 0 and 10
+        for (int i = 0; ; i++)
+        {
+            int odd = 2 * i + 1;
+            if (odd > 10) break;
+            System.out.println(odd);
+        }
+
+        // same program with diff method
+        System.out.println("with diff method");
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 != 0)
+            {
+                System.out.println(i);
+            }
+        }
     }
 }
