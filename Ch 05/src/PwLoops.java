@@ -3,6 +3,22 @@ import java.util.Scanner;
 public class PwLoops {
     public static void main(String[] args) {
 
+        // count the digits of a given number -->
+        System.out.print("count is ");
+
+        int z = 234345;
+        int count = 0;
+
+        if (z == 0) count++;
+
+        while(z != 0)
+        {
+            z /= 10;
+            count++;
+        }
+        System.out.println(count);
+
+        // sum of digit of a given number -->
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the number");
@@ -17,6 +33,7 @@ public class PwLoops {
             n /= 10;
         }
         System.out.println(sum);
+
 
         /* for loop with update inside the loop condition
         for (; n > 0; n /= 10)
@@ -48,7 +65,7 @@ public class PwLoops {
         }
 
         // same program with diff method
-        // in this we r just checking every number from 0 to 10 if they are odd
+        // in this we are just checking every number from 0 to 10 if they are odd
         System.out.println("with diff method");
         for (int i = 0; i < 10; i++) {
             if (i % 2 != 0)
