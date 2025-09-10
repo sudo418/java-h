@@ -27,6 +27,7 @@ public class PwLoops {
         */
 
         // program to print first n odd numbers and their sum
+        // in this we are generating n odd number with the help of the formula
         int n1 = 5;
         int sum1 = 0;
 
@@ -38,6 +39,7 @@ public class PwLoops {
         System.out.println(sum1);
 
         // program to print odd numbers between 0 and 10
+        // in this we are generating odd numbers and if they are less than 10 printing it
         for (int i = 0; ; i++)
         {
             int odd = 2 * i + 1;
@@ -46,6 +48,7 @@ public class PwLoops {
         }
 
         // same program with diff method
+        // in this we r just checking every number from 0 to 10 if they are odd
         System.out.println("with diff method");
         for (int i = 0; i < 10; i++) {
             if (i % 2 != 0)
