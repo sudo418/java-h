@@ -14,6 +14,12 @@ public class Main {
             System.out.println("I am an infinite while loop");
         } */
 
+        /* Infinite for loop -->
+        for(;;)
+        {
+            System.out.println("infinite for loop");
+        } */
+
         /* In C/C++, boolean values can be 1 (true) or 0 (false).
         In C, any non-zero value is considered true, and only 0 is false
         In Java, boolean must be true or false — not 1 or 0. */
