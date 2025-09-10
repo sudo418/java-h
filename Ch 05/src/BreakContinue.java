@@ -45,5 +45,18 @@ public class BreakContinue {
                 continue;
             }
         }
+
+        // continue with do while loop :-
+        int j = 0;
+
+        do {
+            if (j == 2) {
+                j++;
+                continue;
+            }
+            System.out.print(j);
+            System.out.println("\thello");
+            j++;
+        } while(j<5);
     }
 }
