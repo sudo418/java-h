@@ -40,8 +40,7 @@ public class PwLoops {
         {
             int lastDigit = n % 10;
             sum += lastDigit;
-        }
-        */
+        } */
 
         // program to print first n odd numbers and their sum
         // in this we are generating n odd number with the help of the formula
