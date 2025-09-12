@@ -81,3 +81,12 @@ public class Input {
     String line = sc.nextLine(); // now waits for actual input
     */
 
+    /*
+    mixing 2 sc.nextLine :-
+    String s1 = sc.nextLine();
+    String s2 = sc.nextLine();
+
+    Q) why we didn't use 3 sc.nextLine?
+    Ans) sc.nextLine() reads everything up to the newline and also consumes
+    the newline itself.
+    So the \n does not remain in the buffer after nextLine(). */
