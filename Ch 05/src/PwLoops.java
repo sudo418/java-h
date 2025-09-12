@@ -34,6 +34,20 @@ public class PwLoops {
         }
         System.out.println(sum);
 
+        // product of all non-zero digits of a given number
+        int num = 1504;
+
+        int product = 1;
+
+        while (num != 0) {
+            int lastdigit = num % 10;
+            if (lastdigit != 0) {
+                product *= lastdigit;
+            }
+            num /= 10;
+        }
+        System.out.println(product);
+
 
         /* for loop with update inside the loop condition
         for (; n > 0; n /= 10)
