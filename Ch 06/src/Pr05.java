@@ -14,7 +14,7 @@ public class Pr05 {
             arr[i] = sc.nextInt();
         }
 
-        int n1 = Math.floorDiv(arr.length, 2);
+        int n1 = Math.floorDiv(arr.length, 2);   // Math.floorDiv do the greatest integer function (GIF)
         int l = arr.length;
         for (int i = 0; i < n1; i++) {
             int temp = arr[i];
