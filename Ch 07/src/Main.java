@@ -1,3 +1,6 @@
+// method is a function inside a class. Java is an object-oriented programming so all functions are methods.
+// you can call static method using static method directly.
+
 public class Main {
 
     static int add(int x, int y)    // --> these are parameters
@@ -12,6 +15,7 @@ public class Main {
         return z;
     }
 
+    // In Java, parameters are optional for methods. For example :-
     static void hello()
     {
         System.out.println("Hello world!");
