@@ -36,20 +36,20 @@ public class Input {
         System.out.println(b1);
 
         sc.next();
-        /*
-        Q) what is this sc.next is doing here?
+        /* Q) what is this sc.next is doing here?
 
         ans) hasNextInt() on line 34 :- it only CHECKS the next token, it does
         NOT consume it.
-        So if input is "22", the 22 is still there and the sc.next on line 54
+        So if input is "22", the 22 is still there in the buffer and the sc.next on line 54
         will read it.
         So that's why we called sc.next() on line 38 once to consume/discard the
         "22", then call sc.next() on line 54 again to read the following token.
 
-        When we use two sc.next() calls, the first one
-        reads a word and skips over spaces and \n automatically,
-        so the second sc.next(); is ready to take actual user input.
-        */
+        When we use two sc.next() calls, The 1st sc.next() does two things:
+        Consumes the leftover 22 from buffer,
+        Also automatically skips any spaces and \n in buffer.
+        So after 1st sc.next() finishes — buffer is completely clean.
+        That is why the 2nd sc.next() is ready to take fresh user input without any leftover problems. */
 
         String str = sc.next();
         System.out.println(str);
@@ -65,23 +65,17 @@ public class Input {
     sc.next(); reads a word but leaves the newline '\n' in the buffer.
     sc.nextLine(); consumes the \n immediately, without waiting for actual
     input and gives you an empty string.
-    */
 
-    /*
     Example :- Mixing sc.next() with sc.nextLine()
     sc.next();  // Reads a word but leaves '\n'
     String str = sc.nextLine();  // Consumes only '\n' instead of waiting for input
     System.out.println(str);   // gives you an empty string
-    */
 
-    /*
     🔹 How to fix this issue :-
     sc.next();       // read a word
     sc.nextLine();   // consume leftover \n
-    String line = sc.nextLine(); // now waits for actual input
-    */
+    String str2 = sc.nextLine(); // now waits for actual input
 
-    /*
     mixing 2 sc.nextLine :-
     String s1 = sc.nextLine();
     String s2 = sc.nextLine();
