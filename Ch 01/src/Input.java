@@ -36,6 +36,7 @@ public class Input {
         System.out.println(b1);
 
         sc.next();
+        // sc.nextLine();  could also use this and this is better than sc.next() explained more clearly at the bottom
         /* Q) what is this sc.next is doing here?
 
         ans) hasNextInt() on line 34 :- it only CHECKS the next token, it does
@@ -43,13 +44,7 @@ public class Input {
         So if input is "22", the 22 is still there in the buffer and the sc.next on line 54
         will read it.
         So that's why we called sc.next() on line 38 once to consume/discard the
-        "22", then call sc.next() on line 54 again to read the following token.
-
-        When we use two sc.next() calls, The 1st sc.next() does two things:
-        Consumes the leftover 22 from buffer,
-        Also automatically skips any spaces and \n in buffer.
-        So after 1st sc.next() finishes — buffer is completely clean.
-        That is why the 2nd sc.next() is ready to take fresh user input without any leftover problems. */
+        "22", then call sc.next() on line 48 again to read the following token. */
 
         String str = sc.next();
         System.out.println(str);
@@ -83,4 +78,20 @@ public class Input {
     Q) why we didn't use 3 sc.nextLine?
     Ans) sc.nextLine() reads everything up to the newline and also consumes
     the newline itself.
-    So the \n does not remain in the buffer after nextLine(). */
+    So the \n does not remain in the buffer after nextLine().
+
+    When we use two sc.next() calls, then there is no problem
+    String str  = sc.next();  // reads word, leaves \n in buffer
+    String str2 = sc.next();  // automatically SKIPS leftover \n, waits for fresh input ✅
+    next() → next()✅ No problem — auto skips \n
+    next() → nextLine()❌ Problem — \n consumed immediately
+    nextLine() → nextLine()✅ No problem  */
+
+    /* Explanation for line 39 :-
+    Both work for discarding BUT:
+    nextLine() = cleaner discard — removes everything including \n
+    next() = discards token but leaves \n behind in buffer ✅
+    in our case next() worked because the sc.next on line 42 is sc.next so
+    it skips the \n if it would be sc.nextLine then there would be
+    problem and then we have to forcefully use the sc.nextLine instead of
+    sc.next */
