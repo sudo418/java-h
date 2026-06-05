@@ -5,11 +5,11 @@ public class Input {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a number: ");
-//        int a = sc.nextInt();
+        //  int a = sc.nextInt();
         float a = sc.nextFloat();
 
         System.out.print("Enter second number: ");
-//        int b = sc.nextInt();
+        //  int b = sc.nextInt();
         float b = sc.nextFloat();
 
         float sum = (int) a + b;
@@ -55,43 +55,43 @@ public class Input {
         System.out.println(str1);
     }
 }
-    /*
-    If we mix sc.next() with sc.nextLine(), we get problems because :-
-    sc.next(); reads a word but leaves the newline '\n' in the buffer.
-    sc.nextLine(); consumes the \n immediately, without waiting for actual
-    input and gives you an empty string.
+        /*
+        If we mix sc.next() with sc.nextLine(), we get problems because :-
+        sc.next(); reads a word but leaves the newline '\n' in the buffer.
+        sc.nextLine(); consumes the \n immediately, without waiting for actual
+        input and gives you an empty string.
 
-    Example :- Mixing sc.next() with sc.nextLine()
-    sc.next();  // Reads a word but leaves '\n'
-    String str = sc.nextLine();  // Consumes only '\n' instead of waiting for input
-    System.out.println(str);   // gives you an empty string
+        Example :- Mixing sc.next() with sc.nextLine()
+        sc.next();  // Reads a word but leaves '\n'
+        String str = sc.nextLine();  // Consumes only '\n' instead of waiting for input
+        System.out.println(str);   // gives you an empty string
 
-    🔹 How to fix this issue :-
-    sc.next();       // read a word
-    sc.nextLine();   // consume leftover \n
-    String str2 = sc.nextLine(); // now waits for actual input
+        🔹 How to fix this issue :-
+        sc.next();       // read a word
+        sc.nextLine();   // consume leftover \n
+        String str2 = sc.nextLine(); // now waits for actual input
 
-    mixing 2 sc.nextLine :-
-    String s1 = sc.nextLine();
-    String s2 = sc.nextLine();
+        mixing 2 sc.nextLine :-
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
 
-    Q) why we didn't use 3 sc.nextLine?
-    Ans) sc.nextLine() reads everything up to the newline and also consumes
-    the newline itself.
-    So the \n does not remain in the buffer after nextLine().
+        Q) why we didn't use 3 sc.nextLine?
+        Ans) sc.nextLine() reads everything up to the newline and also consumes
+        the newline itself.
+        So the \n does not remain in the buffer after nextLine().
 
-    When we use two sc.next() calls, then there is no problem
-    String str  = sc.next();  // reads word, leaves \n in buffer
-    String str2 = sc.next();  // automatically SKIPS leftover \n, waits for fresh input ✅
-    next() → next()✅ No problem — auto skips \n
-    next() → nextLine()❌ Problem — \n consumed immediately
-    nextLine() → nextLine()✅ No problem  */
+        When we use two sc.next() calls, then there is no problem
+        String str  = sc.next();  // reads word, leaves \n in buffer
+        String str2 = sc.next();  // automatically SKIPS leftover \n, waits for fresh input ✅
+        next() → next()✅ No problem — auto skips \n
+        next() → nextLine()❌ Problem — \n consumed immediately
+        nextLine() → nextLine()✅ No problem  */
 
-    /* Explanation for line 39 :-
-    Both work for discarding BUT:
-    nextLine() = cleaner discard — removes everything including \n
-    next() = discards token but leaves \n behind in buffer ✅
-    in our case next() worked because the sc.next on line 42 is sc.next so
-    it skips the \n if it would be sc.nextLine then there would be
-    problem and then we have to forcefully use the sc.nextLine instead of
-    sc.next */
+        /* Explanation for line 39 :-
+        Both work for discarding BUT:
+        nextLine() = cleaner discard — removes everything including \n
+        next() = discards token but leaves \n behind in buffer ✅
+        in our case next() worked because the sc.next on line 42 is sc.next so
+        it skips the \n if it would be sc.nextLine then there would be
+        problem and then we have to forcefully use the sc.nextLine instead of
+        sc.next */
