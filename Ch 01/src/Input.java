@@ -41,7 +41,7 @@ public class Input {
 
         ans) hasNextInt() on line 34 :- it only CHECKS the next token, it does
         NOT consume it.
-        So if input is "22", the 22 is still there in the buffer and the sc.next on line 54
+        So if input is "22", the 22 and \n are still there in the buffer and the sc.next on line 54
         will read it.
         So that's why we called sc.next() on line 38 once to consume/discard the
         "22", then call sc.next() on line 48 again to read the following token. */
@@ -95,3 +95,13 @@ public class Input {
         it skips the \n if it would be sc.nextLine then there would be
         problem and then we have to forcefully use the sc.nextLine instead of
         sc.next */
+
+        /*  Full buffer trace:
+        User types 22    → buffer: 22\n
+        hasNextInt()     → only checks, buffer: 22\n
+        sc.next()        → consumes 22, SKIPS \n, buffer: \n   (1st \n)
+        User types hello → buffer: \nhello\n
+        sc.next()        → skips \n, reads hello, buffer: \n   (2nd \n)
+        sc.nextLine()    → consumes \n, buffer: EMPTY ✅
+        sc.nextLine()    → waits for fresh input ✅
+        */
