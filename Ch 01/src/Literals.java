@@ -16,6 +16,13 @@ public class Literals {
         System.out.println(str);
         System.out.println(f);
 
+        // to check range :-
+        System.out.println(Float.MIN_VALUE);
+        System.out.println(Float.MAX_VALUE);
+
+        // to check size in bits :-
+        System.out.println(Float.SIZE);
+
         int x = 5;
         float y = 7.545f;
 
