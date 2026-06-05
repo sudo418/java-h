@@ -5,8 +5,8 @@ public class Pr4 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the kilometers : ");
-        double a = sc.nextInt();
+        System.out.print("Enter the kilometers : ");
+        double a = sc.nextDouble();
 
         double miles = a * 0.62137119;
 
