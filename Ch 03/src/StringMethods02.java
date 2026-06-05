@@ -9,7 +9,7 @@ public class StringMethods02 {
         System.out.println(name.startsWith("ra", 3));
 
         System.out.println(name.endsWith("u"));
-        // startsWith and endsWith takes only String as parameteres, not char
+        // startsWith and endsWith takes only String as parameters, not char
 
         System.out.println(name.charAt(3));
 
