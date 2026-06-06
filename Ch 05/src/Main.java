@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 
+        // in loops use any operator pre or post-increment it doesn't matter i++ or ++i
+
         int i = 1;
         while(i <= 5)
         {
