@@ -14,18 +14,16 @@ public class Input {
 
         float sum = (int) a + b;
 
-        System.out.println(a);  // it will print float not int because :-
+        System.out.println(a);  /* it will print float not int because :-
+        But this does not change the value of a. a is still a float in
+        memory. The typecast applies only during the computation of sum  */
 
-        /*
-        Here, only a is typecast to an int for this operation.
+        /* Here, only a is typecast to an int for this operation.
         (int) a + b → cast applies only to a.
         (int) (a + b) → cast applies to the entire sum
         Example: if a = 1.1 and b = 1.1
         (int) a = 1 → then 1 + 1.1 = 2.1 */
 
-        /*
-        But this does not change the value of a. a is still a float in
-        memory. The typecast applies only during the computation of sum */
 
         System.out.print("The sum of 2 numbers is ");
         System.out.println(sum);
@@ -75,7 +73,7 @@ public class Input {
         String s1 = sc.nextLine();
         String s2 = sc.nextLine();
 
-        Q) why we didn't use 3 sc.nextLine?
+        Q) why we didn't use 3 sc.nextLine above?
         Ans) sc.nextLine() reads everything up to the newline and also consumes
         the newline itself.
         So the \n does not remain in the buffer after nextLine().
