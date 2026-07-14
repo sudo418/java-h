@@ -14,6 +14,7 @@ public class Pr01 {
         System.out.println();
         System.out.printf("sum = %.2f\n", sum);
 
+
         // q2
         Scanner sc = new Scanner(System.in);
 
@@ -27,8 +28,18 @@ public class Pr01 {
                 t = true;
             }
         }
-        if (t == true) System.out.println("found");
+        if (t) System.out.println("found");   // explanation below
         else System.out.println("not found");
+
+        /* can also write t == true but is redundant because t
+        already holds true or false by itself. Comparing a boolean
+        to true doesn't add any value.
+        If 't' is false, this if-block is skipped and the else block runs automatically.
+
+        Same idea applies to false:
+        if (t == false)   // ❌ not wrong, but not clean
+        if (!t)           // ✅ preferred — "if t is NOT true"  */
+
 
         // q3
         int[] b = new int[3];
