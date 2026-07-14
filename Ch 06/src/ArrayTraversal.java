@@ -1,7 +1,7 @@
 public class ArrayTraversal {
     public static void main(String[] args) {
 
-        int[] marks ={3,4,5,6,7};
+        int[] marks = {3,4,5,6,7};
         float[] marks1 = {4,5,6,7};
         String[] students = {"hello", "world"};
 
@@ -11,8 +11,7 @@ public class ArrayTraversal {
         System.out.println(students[1]);
 
         System.out.println("Printing array using for loop");
-        for(int i = 0; i < marks.length; i++)
-        {
+        for(int i = 0; i < marks.length; i++) {
             System.out.println(marks[i]);
         }
 
@@ -26,8 +25,7 @@ public class ArrayTraversal {
         arrayOrCollection → the array or collection you want to loop through.  */
 
         System.out.println("Printing array using for loop in reverse order");
-        for(int i = marks.length - 1; i >= 0; i--)
-        {
+        for(int i = marks.length - 1; i >= 0; i--) {
             System.out.println(marks[i]);
         }
     }
