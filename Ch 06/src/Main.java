@@ -20,7 +20,7 @@ public class Main {
             (e.g., a = new int[]{1,2,3,4,5};), which creates a brand-new array object
             in the heap and makes a point to it. */
 
-        // ===== Allocation + Initialization + Assignment (in one line) =====
+        // ===== Allocation + Assignment (declared earlier, value given now) =====
         a1 = new int[]{1,2,3,4}; // creates a new array with values [1, 2, 3, 4]
 
         // ===== Declaration + Allocation + Initialization + Assignment =====.
