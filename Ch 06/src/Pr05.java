@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Pr05 {
@@ -34,6 +35,27 @@ public class Pr05 {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
+
+        // Two-pointer approach to reverse an array :-
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left < right) {
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+
+            left++;
+            right--;
+        }
+        System.out.println(Arrays.toString(arr));
+        /*  Arrays.toString(arr) converts the whole array into a readable
+            String and prints it without you writing a loop yourself.
+            Arrays.toString() is a static method in the java.util.Arrays
+            class. Internally, it does loop through the array — but that loop is
+            already written for you inside the method, so you just call it and get
+            the formatted string directly.   */
 
         // q6
         int max = arr[0];
