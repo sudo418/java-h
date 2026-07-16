@@ -9,7 +9,7 @@ public class StringMethods02 {
         System.out.println(name.startsWith("ra", 3));
 
         System.out.println(name.endsWith("u"));
-        // startsWith and endsWith takes only String as parameters, not char
+        // startsWith and endsWith takes only String as arguments, not char
 
         System.out.println(name.charAt(3));
 
@@ -20,10 +20,9 @@ public class StringMethods02 {
         System.out.println(example.indexOf("r"));
 
         System.out.println(example.indexOf("ry"));
-        /*
-        Returns the index where the substring "ry" starts.
-        Although 'r' is at index 2, "ry" is not found at
-        index 2 instead, "ry" starts at index 3, so it returns 3 */
+        /*  Returns the index where the substring "ry" starts.
+            Although 'r' is at index 2, "ry" is not found at
+            index 2 instead, "ry" starts at index 3, so it returns 3 */
 
         String modifiedName = "Harryrry";
         System.out.println(modifiedName.indexOf("rry"));
