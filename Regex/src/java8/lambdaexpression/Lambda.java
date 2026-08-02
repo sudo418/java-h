@@ -24,6 +24,11 @@ interface StringLength {
     int stringLength(String name);
 }
 
+abstract class Abs {
+    abstract void show();
+}
+
+
 public class Lambda {
     static void main() {
         // ============ Anonymous Class ==================
@@ -64,6 +69,8 @@ public class Lambda {
 
         StringLength s = (name) -> {return name.length();};
         System.out.println("The length of string avi is: " + s.stringLength("avi"));
+
+        // Abs abs = () -> {System.out.println("Hello");};   ⭐ Lambda is only used for functional interface, cannot for abstract class
     }
 }
 /*
