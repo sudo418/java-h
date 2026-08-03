@@ -41,6 +41,9 @@ public class ThreadMethods {
         Thread t9 = new Thread(myt);
         t9.setName("Worker - 1");
         t9.start();
+        // t9.start(); throws error, A thread can be started only once.
+        // If you call start() a second time on the same Thread object,
+        // Java throws an IllegalThreadStateException.
 
         Thread t10 = new Thread(myt);
         t10.setName("Worker - 2");
