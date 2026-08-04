@@ -39,5 +39,18 @@ public class PredicateDemo {
                 else return false;
             }
         };
+
+        Predicate<String> startWithH = x -> x.toLowerCase().charAt(0) == 'h';
+        Predicate<String> endWithO = x -> x.toLowerCase().charAt(x.length() - 1) == 'l';
+        Predicate<String> and = startWithH.and(endWithO);
+        System.out.println(and.test("hello"));
+
+        Predicate<String> or = startWithH.or(endWithO);
+        System.out.println(or.test("hellow"));
+
+        System.out.println(startWithH.negate().test("hello"));
+
+        Predicate<String> predicate = Predicate.isEqual("Hello");
+        System.out.println(predicate.test("Hello"));
     }
 }
