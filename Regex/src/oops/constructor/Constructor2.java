@@ -24,8 +24,8 @@ public class Constructor2 {
 
     // Copy Constructor
     Constructor2(Constructor2 c) {
-        this.name = c.name;
-        this.age = c.age;
+        name = c.name;
+        age = c.age;
     }
 
     public static void main() {
