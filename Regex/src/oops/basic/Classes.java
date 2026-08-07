@@ -25,12 +25,8 @@ public class Classes {
             long enough to access the field/method, then disappears right after that
             statement finishes executing, making the object eligible for garbage collection. */
 
-        Classes e2 = new Classes();
-        Classes e3 = new Classes();
-
-        System.out.println(e2.name);
-
-        System.out.println(e3.id + " " + e3.name);
+        Classes e1 = new Classes();
+        System.out.println(e1.id + " " + e1.name);
 
         /*  Static members are accessible directly in a static area (like main());
             non-static members always need an object to be accessed.  */
@@ -43,12 +39,12 @@ public class Classes {
         System.out.println(Classes.roll);
 
         // 3) Using the object :-
-        Classes e1 = new Classes();
-        System.out.println(e1.roll);
+        Classes e2 = new Classes();
+        System.out.println(e2.roll);
 
-        e1.roll = 101;
-        e1.position = "Boss";
+        e2.roll = 101;
+        e2.position = "Boss";
 
-        System.out.println(e1.roll + " " + e1.position);
+        System.out.println(e2.roll + " " + e2.position);
     }
 }
