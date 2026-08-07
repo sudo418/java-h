@@ -12,17 +12,13 @@ class Student {
     }
 
     // getter
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
+
+    public int getAge() { return age; }
 
     // setter
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getAge() {
-        return age;
     }
 
     public void setAge(int age) {
