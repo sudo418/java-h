@@ -4,13 +4,13 @@ class Student2 {
     String name;
     int age;
 
-    Student2 setName(String n) {
-        this.name = n;
+    Student2 setName(String name) {
+        this.name = name;
         return this;   // returns the current object
     }
 
-    Student2 setAge(int a) {
-        this.age = a;
+    Student2 setAge(int age) {
+        this.age = age;
         return this;   // returns the current object
     }
 
@@ -34,8 +34,7 @@ A method can return this to return a reference to the current object,
 allowing multiple method calls to be chained together in a single
 statement — a pattern commonly used in builder-style designs, where each
 method sets a field and returns the same object for the next call.
- */
-/*
+
 setName() returns 'this' (same object s1), so calling .setAge() right
 after is like writing s1.setAge() again — that's what makes chaining possible
 */
