@@ -68,7 +68,7 @@ public class Lambda {
         System.out.println(obj2.add(10, 20));
 
         StringLength s = (name) -> {return name.length();};
-        System.out.println("The length of string avi is: " + s.stringLength("avi"));
+        System.out.println("The length of string Spring is: " + s.stringLength("Spring"));
 
         // Abs abs = () -> {System.out.println("Hello");};   ⭐ Lambda is only used for functional interface, cannot for abstract class
     }
