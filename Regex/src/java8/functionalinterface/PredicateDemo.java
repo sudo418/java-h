@@ -24,7 +24,7 @@ public class PredicateDemo {
         System.out.println(s.test("hello"));
         System.out.println(s.test(""));
 
-        // optimize the above code
+        // optimize version of the above code
         Predicate<String> s2 = name -> name.isEmpty();
         System.out.println(s2.test(""));
         System.out.println(s2.test("hello"));
