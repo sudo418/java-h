@@ -26,7 +26,7 @@ class EngineeringStudent extends Student {
 
 public class Simple {
     static void main() {
-        EngineeringStudent es = new EngineeringStudent();
+        EngineeringStudent es = new EngineeringStudent("hello", 20);
 
         es.markAttendence();
         es.attendLab();
