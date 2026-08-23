@@ -21,8 +21,10 @@ class S extends Q {
 }
 /*
 class T extends R, S {     // ❌ not allowed in Java
-    void show() {
-        System.out.println("show in R");
+    void Test() {
+        show();         // ❌ Ambiguous — Java doesn't know whether to call R's show() or S's show()
+        this.show();    // ❌ Ambiguous — Java doesn't know which inherited show() this should refer to
+        super.show();   // ❌ Ambiguous — Java doesn't know whether 'super' should refer to R or S
     }
 }
 
