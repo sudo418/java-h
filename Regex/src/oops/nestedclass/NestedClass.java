@@ -13,11 +13,11 @@ public class NestedClass {
         Outer out = new Outer();    // Outer instance #1
         System.out.println(out.a);
 
-        Outer.Inner oi = new Outer().new Inner();   // Outer instance #2 (a DIFFERENT, new one)
-        System.out.println(oi.b);
-
         Outer.Inner oi2 = out.new Inner();      // uses SAME Outer instance as 'out' (instance #1)
         System.out.println(oi2.b);
+
+        Outer.Inner oi = new Outer().new Inner();   // Outer instance #2 (a DIFFERENT, new one)
+        System.out.println(oi.b);
     }
 }
 /*
