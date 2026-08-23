@@ -9,16 +9,27 @@ class B extends A {
 
     int age = 10;   // ⚠️ this is a NEW field, shadows A's age — not the same variable
 
-    /* Inside a method or constructor — yes, totally fine:
+    /* --> Inside a method or constructor — yes, totally fine:
     void update() {
-        age = 10;   // ✅ works — accessing/modifying the inherited field
+        age = 20;        // ✅ Changes B.age because B has its own 'age' field
+        this.age = 30;   // ✅ Changes B.age — 'this' refers to the current B object
+        super.age = 40;  // ✅ Changes A.age — 'super' refers to the parent part of the object
     }
-    */
-    /* Or inside a constructor:
+    --> Or inside a constructor:
      B() {
-        age = 10;   // ✅ also works — sets inherited field when B object is created
-    }
-    */
+        age = 10;   // ✅ also works
+    }   */
+
+    /*
+    If B did NOT have its own 'age':
+
+    class B extends A {
+        void update() {
+            age = 20;        // ✅ Changes inherited A.age
+            this.age = 30;   // ✅ Also changes inherited A.age
+            super.age = 40;  // ✅ Explicitly changes A.age
+        }
+    }   */
 }
 
 public class Basics {
