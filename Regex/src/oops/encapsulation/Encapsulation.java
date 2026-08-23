@@ -3,12 +3,10 @@ package oops.encapsulation;
 class Student {
     private String name;
     private int age;
-    private int roll;
 
     Student(String name, int age, int roll) {
         this.name = name;
         this.age = age;
-        this.roll = roll;
     }
 
     // getter
