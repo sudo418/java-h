@@ -18,5 +18,4 @@ class Z extends X, Y {   // ❌ not allowed in Java
 
 public class Multiple {
     Multiple m = new Multiple();
-
 }
