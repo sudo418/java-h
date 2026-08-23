@@ -15,5 +15,7 @@ public class A {
             is inside class A itself — access modifiers don't
             restrict access within the same class, regardless
             of private/public/default.  */
+
+        // System.out.println(a); error -> non-static variable a cannot be referenced from a static context
     }
 }
