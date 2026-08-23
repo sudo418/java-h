@@ -20,7 +20,7 @@ class Dog extends Animal {
     String name;
 
     // 3) super() to call parent's constructor
-    Dog(String name,String color, int age) {
+    Dog(String color,String name, int age) {
         super(color, age);  // calls Animal's constructor
         this.name = name;
         System.out.println("Dog created");
@@ -37,7 +37,6 @@ class Dog extends Animal {
     // 2. super to call parent's method
     void print() {
         super.print();     // calls parent's version first
-        System.out.println(name);
     }
 }
 
