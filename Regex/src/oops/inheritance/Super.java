@@ -40,9 +40,9 @@ class Dog extends Animal {
         System.out.println(name);
     }
 }
+
 public class Super {
     static void main() {
-
         Dog d = new Dog("doggy","pink", 33);
 
         d.print();
