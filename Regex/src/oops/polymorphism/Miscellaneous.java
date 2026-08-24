@@ -22,7 +22,7 @@ class Base {
     }
 }
 
-class Derived extends oops.polymorphism.Base {
+class Derived extends Base {
     // this doesn't override 'a', it just hides Base's a with a new one
     int a = 20;
 
