@@ -28,7 +28,7 @@ class X {
                 '}';
     }
 }
-public class Overriding {
+public class ToStringOverriding {
     static void main() {
         X x  = new X();
 
