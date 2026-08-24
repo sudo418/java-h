@@ -14,8 +14,8 @@ class Train  {
     }
 
     void startTrain() {
-        System.out.println("Train starting...");
         e.startEngine();
+        System.out.println("Train starting...");
     }
 }
 
