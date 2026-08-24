@@ -47,8 +47,8 @@ class Derived extends oops.polymorphism.Base {
 
 public class Miscellaneous {
     static void main() {
-        oops.polymorphism.Base b = new Base();
-        oops.polymorphism.Derived d = new Derived();
+        Base b = new Base();
+        Derived d = new Derived();
 
         Base base = new Derived();
         System.out.println(base.a);
