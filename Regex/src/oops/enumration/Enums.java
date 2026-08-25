@@ -1,7 +1,5 @@
 package oops.enumration;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 class PaymentStatus2 {
     public static final int SUCCESS = 1;
     public static final int PENDING = 2;
